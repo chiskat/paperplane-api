@@ -1,3 +1,7 @@
+# Deprecated 已弃用
+
+自 2025 年起，此项目迁移到 [`paperplane-web-console`](https://git.paperplane.cc/jia-niang/paperplane-web-console)，这是一个 monorepo，完全包含此项目。
+
 # PaperPlane API [![Build Status](https://drone.paperplane.cc/api/badges/jia-niang/paperplane-api/status.svg)](https://drone.paperplane.cc/jia-niang/paperplane-api)
 
 网站后台，同时也为 https://app.paperplane.cc 提供 API 支持。  
