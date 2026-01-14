@@ -1,11 +1,11 @@
 # Deprecated 已弃用
 
-自 2025 年起，此项目迁移到 [`paperplane-web-console`](https://git.paperplane.cc/jia-niang/paperplane-web-console)，这是一个 monorepo，完全包含此项目。
+自 2025 年起，此项目迁移到 [`paperplane-web-console`](https://git.paperplane.cc/chiskat/paperplane-web-console)，这是一个 monorepo，完全包含此项目。
 
-# PaperPlane API [![Build Status](https://drone.paperplane.cc/api/badges/jia-niang/paperplane-api/status.svg)](https://drone.paperplane.cc/jia-niang/paperplane-api)
+# PaperPlane API
 
 网站后台，同时也为 https://app.paperplane.cc 提供 API 支持。  
-[原始代码仓库](https://git.paperplane.cc/jia-niang/paperplane-api) · [Github 代码镜像](https://github.com/PaperplaneJS/webapi) · [CI/CD](https://drone.paperplane.cc/jia-niang/paperplane-api)
+[原始代码仓库](https://git.paperplane.cc/chiskat/paperplane-api) · [Github 代码镜像](https://github.com/chiskat/webapi) · [CI/CD](https://drone.paperplane.cc/chiskat/paperplane-api)
 
 # 运行需求
 
@@ -137,13 +137,12 @@ yarn build && yarn start:prod
 
 ## 关于基础镜像
 
+注意，项目中用到的基础镜像已失效，请自行构建运行镜像。
+
 因为使用到 `puppeteer`、`git` 等工具，对运行环境有要求，Node.js 基础镜像无法满足需求，需要使用特定的基础镜像来运行。
 注意，请不要使用 `-slim`、`-alpine` 类型的镜像，它们缺少一些指令（例如 `ps`）会导致某些功能运行时报错。
 
-在文件 `Dockerfile` 中可以看到使用 [`paperplanecc/paperplane-api-base`](https://hub.docker.com/r/paperplanecc/paperplane-api-base) 作为基础镜像。  
-此镜像是专门为本项目准备、已事前构建好的。
-
-也可以自行构建基础镜像，此处给出基础镜像的构建方式：
+此处给出基础镜像的构建方式：
 
 ```Dockerfile
 FROM node:20.13.0
